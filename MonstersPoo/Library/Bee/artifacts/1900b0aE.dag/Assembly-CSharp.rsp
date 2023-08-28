@@ -345,9 +345,11 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.VSCode.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
+"Assets/Scripts/ManagerGame.cs"
 "Assets/Scripts/MonsterPoo.cs"
 "Assets/Scripts/MonsterPoo2.cs"
 "Assets/Scripts/Monster_cubo.cs"
+"Assets/Scripts/Morir.cs"
 "Assets/Scripts/Muerte.cs"
 -langversion:9.0
 

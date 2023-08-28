@@ -8,11 +8,13 @@ public class Monster_cubo : MonsterPoo
 
     private Vector3 targetPosition;// nuevo punto de destino
 
-    private float velocida_giro = 80f; 
+    private float velocida_giro = 80f;
 
     void Start()
     {
         iniciar();
+        cambiar_comida("esfera");
+        cambiar_color(Color.gray);
     }
 
     // Update is called once per frame
@@ -27,7 +29,7 @@ public class Monster_cubo : MonsterPoo
         {
             // Llegamos al punto, elegir uno nuevo
             GenerarPuntoDestino();
-            Debug.Log("Me estoy moviendooooo");
+            
         }
         // Mover hacia el punto objetivo
         transform.position = Vector3.MoveTowards(transform.position, targetPosition, velocidad * Time.deltaTime);

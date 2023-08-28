@@ -8,6 +8,8 @@ public class MonsterPoo2 : MonsterPoo
     void Start()
     {
         iniciar();
+        cambiar_comida("capsula");
+        cambiar_color(Color.red);
     }
 
     // Update is called once per frame

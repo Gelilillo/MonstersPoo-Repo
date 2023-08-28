@@ -10,9 +10,10 @@ public class Muerte : MonoBehaviour
     public Color color;
     void Start()
     {
-        
+
 
         // Cambia el color de las partículas
+        Invoke("destruir", 2f);
         
     }
 
@@ -29,6 +30,9 @@ public class Muerte : MonoBehaviour
         mainModule.startColor = color;
         particleSystem.Play();
 
-
+    }
+    private void destruir()
+    {
+        Destroy(gameObject);
     }
 }

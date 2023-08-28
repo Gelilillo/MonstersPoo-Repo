@@ -7,32 +7,27 @@ public class MonsterPoo : MonoBehaviour
     // Start is called before the first frame update
     //Variables de cada monstruo
 
-    public float comida = 1;
-    public float velocidad = 5f;
-    public Color color = Color.blue;
-
-    public string[] forma = { "Capsula", "Esfera", "Rectangiulo" };
-
+    public float velocidad = 8f;
+    
 
     private Vector3 targetPosition;// nuevo punto de destino
     public float minDistance = 1f;
     public GameObject muerte;
     private Material material;
+    private string comida = "cubo";
 
 
 
     void Start()
     {
         iniciar();
+        cambiar_color(Color.blue);
     }
 
     public void iniciar()
     {
         GenerarPuntoDestino();
-        Invoke("Muerte", 4f);
-        material = GetComponent<Renderer>().material;
 
-        material.color = color;
     }
 
     // Update is called once per frame
@@ -64,19 +59,37 @@ public class MonsterPoo : MonoBehaviour
         float randomZ = Random.Range(-20f, 20f);
         targetPosition = new Vector3(randomX, 1f, randomZ);
     }
-
-    private void Muerte()
-    {
-        // Iniciar el sistema de partículas
-
-        Debug.Log("Muerte a los 4 segundos"); 
-        Destroy(gameObject);
-        Vector3 posicion = new Vector3(transform.position.x, transform.position.y, transform.position.z);
-        GameObject GO_muerte= Instantiate(muerte, posicion,Quaternion.identity);
-
-        Muerte sc_muerte = GO_muerte.GetComponent<Muerte>();
-
-        sc_muerte.morir(color);
         
+    void OnTriggerEnter(Collider other)//cuando chocan con otra figura , si es su alimento se lo come.
+    {
+        if (other.gameObject.tag == comida & other.gameObject.tag != gameObject.tag)
+        {
+
+            Debug.Log(gameObject.tag + "se ha comido un " + other.gameObject.tag);
+
+            other.gameObject.GetComponent<Morir>().Muerte();
+
+
+        }
+        
+
+    }
+    public void cambiar_comida(string nueva_comida)
+    {
+
+        comida = nueva_comida;
+
+    }
+    public void cambiar_color(Color nuevo_color)
+    {
+
+        material = GetComponent<Renderer>().material;
+        material.color = nuevo_color;
+    }
+    public void comer(Collision other)
+    {
+
+        
+
     }
 }
