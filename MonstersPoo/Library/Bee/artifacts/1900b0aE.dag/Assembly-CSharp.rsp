@@ -351,6 +351,7 @@
 "Assets/Scripts/Monster_cubo.cs"
 "Assets/Scripts/Morir.cs"
 "Assets/Scripts/Muerte.cs"
+"Assets/Scripts/UI.cs"
 -langversion:9.0
 
 /deterministic

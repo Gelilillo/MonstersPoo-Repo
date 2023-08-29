@@ -16,6 +16,8 @@ public class MonsterPoo : MonoBehaviour
     private Material material;
     private string comida = "cubo";
 
+  
+
 
 
     void Start()
