@@ -11,12 +11,13 @@ public class MonsterPoo : MonoBehaviour
     
 
     private Vector3 targetPosition;// nuevo punto de destino
-    public float minDistance = 1f;
+    public float minDistance = 1f; //ENCAPSULAMIENTO
     public GameObject muerte;
     private Material material;
-    private string comida = "cubo";
+    private string comida = "cubo"; 
 
-  
+    private float max_x = 14f; //ENCAPSULAMIENTO
+    private float max_z = 20f;//ENCAPSULAMIENTO
 
 
 
@@ -57,8 +58,8 @@ public class MonsterPoo : MonoBehaviour
     public void GenerarPuntoDestino()
     {
         // Generar una nueva posición aleatoria en el rango del tablero
-        float randomX = Random.Range(-14f, 14f);
-        float randomZ = Random.Range(-20f, 20f);
+        float randomX = Random.Range(-max_x, max_x);
+        float randomZ = Random.Range(-max_z, max_z);
         targetPosition = new Vector3(randomX, 1f, randomZ);
     }
         

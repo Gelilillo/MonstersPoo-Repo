@@ -141,7 +141,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &270558214
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -238,7 +238,7 @@ GameObject:
   - component: {fileID: 353923278}
   - component: {fileID: 353923277}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Texto_Boton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -396,7 +396,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 59, y: 52}
+  m_AnchoredPosition: {x: 59, y: 108}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &444320584
@@ -419,9 +419,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Se ha creado un clase Monstruo que dispone de los metodos de \n- Movimiento\n-
-    Comer (OnTriggerEnter)\nDe esta forma se han creado 40 objetos con esa clase
-    asignada."
+  m_text: Sin texto
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -727,7 +725,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 108}
+  m_AnchoredPosition: {x: 13, y: -94}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &780441867
@@ -773,7 +771,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 780441868}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1372791083}
+        m_TargetAssemblyTypeName: ManagerGame, Assembly-CSharp
+        m_MethodName: siguiente_paso
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &780441868
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -909,11 +919,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7be8c15726770cf4881535a62e79cf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  num_monstruos: 40
+  num_monstruos_1: 50
+  num_monstruos_2: 50
   mousntruos_1:
   - {fileID: 5453337706996108427, guid: e4e7a6482c514684f9bed7dc0b7d92cf, type: 3}
-  mousntruos_2: []
-  text_mensaje: {fileID: 0}
+  mousntruos_2:
+  - {fileID: 1108681611154615102, guid: a3276c41c00d2734e90eff69d1355e75, type: 3}
+  - {fileID: 7051119698417584673, guid: af378ecd1b77c9f458ba81a28237028d, type: 3}
+  - {fileID: 5453337706996108427, guid: e4e7a6482c514684f9bed7dc0b7d92cf, type: 3}
+  text_mensaje: {fileID: 444320584}
+  text_boton: {fileID: 353923277}
   canvas: {fileID: 270558216}
 --- !u!4 &1372791084
 Transform:
@@ -957,7 +972,7 @@ RectTransform:
   m_GameObject: {fileID: 1583119526}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3.1095874, y: 2.4714346, z: 1.3093}
+  m_LocalScale: {x: 3.1095874, y: 2.749471, z: 1.3093}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 270558217}

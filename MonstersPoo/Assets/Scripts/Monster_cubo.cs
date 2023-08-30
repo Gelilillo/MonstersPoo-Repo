@@ -14,7 +14,7 @@ public class Monster_cubo : MonsterPoo
     {
         iniciar();
         cambiar_comida("esfera");
-        cambiar_color(Color.gray);
+        cambiar_color(Color.gray); //POLIFORMISMO
     }
 
     // Update is called once per frame
@@ -22,7 +22,7 @@ public class Monster_cubo : MonsterPoo
     {
         movimiento();
     }
-    public override void movimiento() 
+    public override void movimiento() //POLIFORMISMO
     {
         // Verificar si el objeto está cerca del punto objetivo
         if (Vector3.Distance(transform.position, targetPosition) < minDistance)

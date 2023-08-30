@@ -569,7 +569,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Ejercicio para mostrar los conceptos basicos de la programacion por Objetos(POO)
+  m_text: "Ejercicio para mostrar los conceptos b\xE1sicos de la programaci\xF3n
+    por Objetos(POO)"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
